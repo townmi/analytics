@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS样式规范一 | Towne&#39;s blog</title>
+  <meta name="author" content="towne">
+  
+  <meta name="description" content="towne taobao baidu">
+  
+  
+  <meta property="og:title" content="CSS样式规范一"/>
+  <meta property="og:site_name" content="Towne&#39;s blog"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+   <link rel="apple-touch-icon" href="/icon.png" />
+   <link rel="shortcut icon" href="/favicon.png" >
+   <link rel="alternate" href="http://xxx.xx/atom.xml" title="Towne&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div id="content" class="inner">
+    <aside id="sidebar" class="alignleft">
+      <div class="navigationBar">
+        <a href="/">Towne&#39;s blog</a>
+      </div>
+    	
+  <nav class="widget" id="menu">
+	<ul>
+    
+      <li class="cell"><a class="next" href="/">Home</a><li>
+    
+      <li class="cell"><a class="next" href="/archives/">Archives</a><li>
+    
+      <li class="cell"><a class="next" href="/about/">About</a><li>
+    
+      <li class="cell"><a class="next" href="/atom.xml">Subscribe</a><li>
+    
+    </ul>
+</nav>
+
+  <div class="widget weibo">
+<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=110&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=0&isWeibo=0&isFans=0&uid=null&verifier=78e1ee4d&colors=ffffff,ffffff,999,000,ecfbfd&dpc=1"></iframe>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/JS/">JS</a><small>1</small></li>
+  
+    <li><a href="/categories/css/">css</a><small>2</small></li>
+  
+    <li><a href="/categories/javascript/">javascript</a><small>5</small></li>
+  
+    <li><a href="/categories/js/">js</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/DOM节点/" style="font-size: NaNpx;">DOM节点</a><a href="/tags/css/" style="font-size: NaNpx;">css</a><a href="/tags/js/" style="font-size: NaNpx;">js</a><a href="/tags/layout/" style="font-size: NaNpx;">layout</a><a href="/tags/object/" style="font-size: NaNpx;">object</a><a href="/tags/this/" style="font-size: NaNpx;">this</a><a href="/tags/作用域/" style="font-size: NaNpx;">作用域</a><a href="/tags/面向对象/" style="font-size: NaNpx;">面向对象</a><a href="/tags/项目说明/" style="font-size: NaNpx;">项目说明</a>
+  </div>
+</div>
+
+
+    	<footer id="footer" class="inner"><div class="copyright">
+  
+  &copy; 2014 towne
+  
+</div>
+
+
+
+</footer>
+    </aside>
+    
+    
+    <div id="hidden-navigationBar" class="navigationBar">
+      <a href="/">Towne&#39;s blog</a>
+    </div>
+    <div id="main-col" class="alignright">
+    <div id="wrapper">
+      
+<article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+  <header>
+      
+      
+  
+    <h1 class="title">CSS样式规范一</h1>
+  
+
+      <time datetime="2014-05-16T03:11:15.000Z"><a href="/2014/05/16/CSS/">5月 16 2014</a></time>
+      
+  </header>
+    <div class="entry">
+      
+        <h2 id="元素分类(常规)">元素分类(常规)</h2>
+<ol>
+<li>块级元素：(display: block) [div, h1 ~ h6, p, ul, ol, dl, li, dt, dd]</li>
+<li>内嵌块元素:(display: inline-block) [img, input]</li>
+<li>内嵌元素：(display: inline) [strong, em, a, span]</li>
+<li>table元素：(display: inline-table)</li>
+</ol>
+<p><strong>css标签元素的分类就好比javascript里面数据类型的分类，如果你拿到一个变量却不知道这个变量的数据类型，你敢用么。可想而知，CSS里面标签元素分类的重要性.</strong></p>
+<p>一.内嵌元素的特性：</p>
+<ol>
+<li>行内元素不会应用width属性，其长度是由内容撑开的</li>
+<li>行内元素不会应用height属性，其高度也是由内容撑开的，但是高度可以通过line-height调节</li>
+<li>行内元素的padding属性只用padding-left和padding-right生效，padding-top和padding-bottom会改变元素范围，但不会对其它元素造成影响</li>
+<li>行内元素的margin属性只有margin-left和margin-right有效，margin-top和margin-bottom无效</li>
+<li>行内元素的overflow属性无效，这个不用多说了</li>
+<li>行内元素的vertical-align属性无效（height属性无效）</li>
+</ol>
+
+	 
+	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
+<span>Posted by <a style="color:#9f9f9f;" href="null"><strong>null</strong></a> - 5月 16 2014</span><br />
+<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://yoursite.com"><strong>Towne&#39;s blog</strong></a></span>
+</p>
+       	 
+      
+    </div>
+    <footer>
+      
+	 
+     		  
+  
+  <div class="categories">
+    <a href="/categories/css/">css</a>
+  </div>
+
+       		
+  
+  <div class="tags">
+    <a href="/tags/css/">css</a>
+  </div>
+
+     		  
+       	 
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div>
+    </div>
+    <div class="tabbar" onload="divideTabBar()">
+	
+      <div class="tabbaritem"><a class="next" href="/">Home</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/archives/">Archives</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/about/">About</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/atom.xml">Subscribe</a></div>
+    
+</div>
+
+
+  </div>
+</body>
+</html>

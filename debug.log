@@ -1,0 +1,29 @@
+date: "2014-11-12 22:16:13.114"
+argv: node /Users/towne/git/nvm/v0.11.11/bin/hexo g
+os: Darwin 13.4.0 darwin x64
+versions:
+  http_parser: "2.2"
+  node: 0.11.11
+  v8: 3.22.24.19
+  uv: 0.11.18
+  zlib: 1.2.3
+  modules: "14"
+  openssl: 1.0.1f
+  hexo: 2.8.3
+---
+[debug] 22:16:12.932 Config file loaded from /Users/towne/git/blog/_config.yml[debug] 22:16:12.933 Version info checked successfully[debug] 22:16:12.948 Loading database.[debug] 22:16:12.975 Processed: draft.md (2ms)[debug] 22:16:12.975 Processed: page.md (1ms)[debug] 22:16:12.979 Processed: post.md (5ms)[debug] 22:16:12.979 Processed: photo.md (5ms)[debug] 22:16:12.988 Plugin loaded successfully: hexo-renderer-ejs[debug] 22:16:12.998 Plugin loaded successfully: hexo-renderer-marked[debug] 22:16:13.075 Plugin loaded successfully: hexo-renderer-stylus[debug] 22:16:13.086 Processed: _posts/hello-world.md (4ms)[debug] 22:16:13.100 Processed: source/fancybox/blank.gif (0ms)[debug] 22:16:13.100 Processed: source/fancybox/fancybox_loading.gif (0ms)[debug] 22:16:13.100 Processed: source/fancybox/fancybox_overlay.png (0ms)[debug] 22:16:13.100 Processed: source/fancybox/jquery.fancybox.css (0ms)[debug] 22:16:13.100 Processed: source/fancybox/fancybox_sprite.png (0ms)[debug] 22:16:13.100 Processed: source/fancybox/jquery.fancybox.pack.js (0ms)[debug] 22:16:13.100 Processed: source/js/gallery.js (0ms)[debug] 22:16:13.100 Processed: source/js/jquery.imagesloaded.min.js (0ms)[debug] 22:16:13.100 Processed: source/js/moment.min.js (0ms)[debug] 22:16:13.101 Processed: source/css/style.styl (1ms)[debug] 22:16:13.101 Processed: source/css/_base/layout.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_base/utils.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_base/variable.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/archive.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/article.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/comment.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/footer.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/header.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/index.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/sidebar.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/syntax.styl (0ms)[debug] 22:16:13.101 Processed: source/css/_partial/tabbar.styl (0ms)[debug] 22:16:13.101 Processed: source/css/font/fontawesome-webfont.eot (0ms)[debug] 22:16:13.101 Processed: source/css/font/fontawesome-webfont.svg (0ms)[debug] 22:16:13.101 Processed: source/css/font/fontawesome-webfont.ttf (0ms)[debug] 22:16:13.101 Processed: source/css/font/fontawesome-webfont.woff (0ms)[debug] 22:16:13.103 Processed: layout/archive.ejs (5ms)[debug] 22:16:13.103 Processed: layout/category.ejs (5ms)[debug] 22:16:13.103 Processed: layout/index.ejs (5ms)[debug] 22:16:13.103 Processed: layout/layout.ejs (5ms)[debug] 22:16:13.103 Processed: layout/page.ejs (5ms)[debug] 22:16:13.103 Processed: layout/post.ejs (5ms)[debug] 22:16:13.103 Processed: layout/tag.ejs (5ms)[debug] 22:16:13.103 Processed: layout/_widget/category.ejs (5ms)[debug] 22:16:13.103 Processed: layout/_widget/menu.ejs (5ms)[debug] 22:16:13.103 Processed: layout/_widget/recent_posts.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_widget/search.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_widget/tag.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_widget/tagcloud.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_widget/weibo.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/after_footer.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/archive.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/article.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/comment.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/footer.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/google_analytics.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/head.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/pagination.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/sidebar.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/tabbar.ejs (4ms)[debug] 22:16:13.103 Processed: layout/_partial/post/category.ejs (4ms)[debug] 22:16:13.104 Processed: layout/_partial/post/copyright.ejs (5ms)[debug] 22:16:13.104 Processed: layout/_partial/post/share.ejs (5ms)[debug] 22:16:13.104 Processed: layout/_partial/post/tag.ejs (4ms)[debug] 22:16:13.104 Processed: layout/_partial/post/gallery.ejs (4ms)[debug] 22:16:13.104 Processed: layout/_partial/post/title.ejs (4ms)[debug] 22:16:13.104 Theme config loaded[debug] 22:16:13.104 Processed: _config.yml (6ms)[debug] 22:16:13.105 Processed: languages/default.yml (7ms)[error] 22:16:13.106 { name: 'HexoError',
+  reason: 'incomplete explicit mapping pair; a key node is missed',
+  mark: 
+   { name: null,
+     buffer: 'categories: Categories\nsearch: Search\ntags: Tags\ntagcloud: Tags\ntweets: Tweets\nprev: Prev\nnext: Next\ncomment: Comments\narchive_a: Archives\narchive_b: Archives: %s\npage: Page %d\nrecent_posts: Recent Posts\n\u0000',
+     position: 158,
+     line: 9,
+     column: 19 },
+  message: 'Process failed: languages/default_1.yml',
+  domain: 
+   { domain: null,
+     _events: { error: [Function] },
+     _maxListeners: undefined,
+     members: [ [Object] ] },
+  domainThrown: true,
+  stack: undefined }[debug] 22:16:13.110 Processed: languages/zh-CN.yml (12ms)

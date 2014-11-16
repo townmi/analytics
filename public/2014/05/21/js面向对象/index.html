@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS面向对象 | Towne&#39;s blog</title>
+  <meta name="author" content="towne">
+  
+  <meta name="description" content="towne taobao baidu">
+  
+  
+  <meta property="og:title" content="JS面向对象"/>
+  <meta property="og:site_name" content="Towne&#39;s blog"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+   <link rel="apple-touch-icon" href="/icon.png" />
+   <link rel="shortcut icon" href="/favicon.png" >
+   <link rel="alternate" href="http://xxx.xx/atom.xml" title="Towne&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div id="content" class="inner">
+    <aside id="sidebar" class="alignleft">
+      <div class="navigationBar">
+        <a href="/">Towne&#39;s blog</a>
+      </div>
+    	
+  <nav class="widget" id="menu">
+	<ul>
+    
+      <li class="cell"><a class="next" href="/">Home</a><li>
+    
+      <li class="cell"><a class="next" href="/archives/">Archives</a><li>
+    
+      <li class="cell"><a class="next" href="/about/">About</a><li>
+    
+      <li class="cell"><a class="next" href="/atom.xml">Subscribe</a><li>
+    
+    </ul>
+</nav>
+
+  <div class="widget weibo">
+<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=110&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=0&isWeibo=0&isFans=0&uid=null&verifier=78e1ee4d&colors=ffffff,ffffff,999,000,ecfbfd&dpc=1"></iframe>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/JS/">JS</a><small>1</small></li>
+  
+    <li><a href="/categories/css/">css</a><small>2</small></li>
+  
+    <li><a href="/categories/javascript/">javascript</a><small>5</small></li>
+  
+    <li><a href="/categories/js/">js</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/DOM节点/" style="font-size: NaNpx;">DOM节点</a><a href="/tags/css/" style="font-size: NaNpx;">css</a><a href="/tags/js/" style="font-size: NaNpx;">js</a><a href="/tags/layout/" style="font-size: NaNpx;">layout</a><a href="/tags/object/" style="font-size: NaNpx;">object</a><a href="/tags/this/" style="font-size: NaNpx;">this</a><a href="/tags/作用域/" style="font-size: NaNpx;">作用域</a><a href="/tags/面向对象/" style="font-size: NaNpx;">面向对象</a><a href="/tags/项目说明/" style="font-size: NaNpx;">项目说明</a>
+  </div>
+</div>
+
+
+    	<footer id="footer" class="inner"><div class="copyright">
+  
+  &copy; 2014 towne
+  
+</div>
+
+
+
+</footer>
+    </aside>
+    
+    
+    <div id="hidden-navigationBar" class="navigationBar">
+      <a href="/">Towne&#39;s blog</a>
+    </div>
+    <div id="main-col" class="alignright">
+    <div id="wrapper">
+      
+<article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+  <header>
+      
+      
+  
+    <h1 class="title">JS面向对象</h1>
+  
+
+      <time datetime="2014-05-21T13:32:08.000Z"><a href="/2014/05/21/js面向对象/">5月 21 2014</a></time>
+      
+  </header>
+    <div class="entry">
+      
+        <h3 id="我对JS面向对象的一些看法">我对JS面向对象的一些看法</h3>
+<hr>
+<p>面向对象是一个听起来很抽象的概念，以至于我顿时不知道该写什么了。上上个礼拜，写了个小游戏，给老师看了一下，老师给提出用面向对象的编程思想去写，面向对象可以大幅度的降低代码的耦合度。今天闲着没事干，看了老师录的面向对象那一块的视频，终于有了一点看法。<br>扯了那么多，得来点代码消化消化。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();</div></pre></td></tr></table></figure>
+
+<p>上面是我们在JS中经常创建对象的方式，当然下面两种咱们基本不用，咱们拿来看看。我们要生成一个对象，我们都是new一个Xxx()出来的，就好比一个厨师要做一个番茄炒蛋，他肯定要把鸡蛋和番茄都new出来才能做菜。但是JS本身并不是菜市场，我想要什么就new什么，但是JS提供了构造函数该我们用，就好比菜市场肯定没有番茄鸡蛋虾米酱，我们只能自己去做了。先看看构造函数：<br><a id="more"></a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Sauce</span><span class="params">(a,b,c)</span></span>{</div><div class="line">	<span class="keyword">this</span>.a = a;</div><div class="line">	<span class="keyword">this</span>.b = b;</div><div class="line">	<span class="keyword">this</span>.c = c;</div><div class="line">	<span class="keyword">this</span>.getSauce = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.a+<span class="keyword">this</span>.b+<span class="keyword">this</span>.c+<span class="string">"sauce"</span>;</div><div class="line">	}</div><div class="line">}</div><div class="line"><span class="keyword">var</span> tes = <span class="keyword">new</span> Sauce(<span class="string">"tomato"</span>,<span class="string">"egg"</span>,<span class="string">"shrimp"</span>);</div><div class="line"><span class="built_in">console</span>.log(tes.getSauce());</div></pre></td></tr></table></figure>
+
+<p>这样番茄鸡蛋虾米酱，够吃一年了。Sauce这个构造函数就像是一个机器一样，你穿什么进去，它就给你捣鼓什么。突然吃了半年的番茄鸡蛋虾米酱，我们想换换口味了，能不能就拌两种食材呢。我们可以直接在构造函数里面在加一段<code>this.getTwoSauce = function(){···}</code>，当然这样做没问题。但是咱们不想把这个机器拆的七零八落的，在装个什么上去，麻烦，机器还容易拆坏。JS给我们提供了一个很不错的工具。那就是prototype原型。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Sauce.prototype.getTwoSauce = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{</div><div class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.a+<span class="keyword">this</span>.b+<span class="string">"sauce"</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>你会发现我们的机器可以拌两种酱了。</p>
+
+	 
+	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
+<span>Posted by <a style="color:#9f9f9f;" href="null"><strong>null</strong></a> - 5月 21 2014</span><br />
+<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://yoursite.com"><strong>Towne&#39;s blog</strong></a></span>
+</p>
+       	 
+      
+    </div>
+    <footer>
+      
+	 
+     		  
+  
+  <div class="categories">
+    <a href="/categories/javascript/">javascript</a>
+  </div>
+
+       		
+  
+  <div class="tags">
+    <a href="/tags/面向对象/">面向对象</a>
+  </div>
+
+     		  
+       	 
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div>
+    </div>
+    <div class="tabbar" onload="divideTabBar()">
+	
+      <div class="tabbaritem"><a class="next" href="/">Home</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/archives/">Archives</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/about/">About</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/atom.xml">Subscribe</a></div>
+    
+</div>
+
+
+  </div>
+</body>
+</html>

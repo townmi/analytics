@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS作用域 | Towne&#39;s blog</title>
+  <meta name="author" content="towne">
+  
+  <meta name="description" content="towne taobao baidu">
+  
+  
+  <meta property="og:title" content="JS作用域"/>
+  <meta property="og:site_name" content="Towne&#39;s blog"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+   <link rel="apple-touch-icon" href="/icon.png" />
+   <link rel="shortcut icon" href="/favicon.png" >
+   <link rel="alternate" href="http://xxx.xx/atom.xml" title="Towne&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div id="content" class="inner">
+    <aside id="sidebar" class="alignleft">
+      <div class="navigationBar">
+        <a href="/">Towne&#39;s blog</a>
+      </div>
+    	
+  <nav class="widget" id="menu">
+	<ul>
+    
+      <li class="cell"><a class="next" href="/">Home</a><li>
+    
+      <li class="cell"><a class="next" href="/archives/">Archives</a><li>
+    
+      <li class="cell"><a class="next" href="/about/">About</a><li>
+    
+      <li class="cell"><a class="next" href="/atom.xml">Subscribe</a><li>
+    
+    </ul>
+</nav>
+
+  <div class="widget weibo">
+<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=110&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=0&isWeibo=0&isFans=0&uid=null&verifier=78e1ee4d&colors=ffffff,ffffff,999,000,ecfbfd&dpc=1"></iframe>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/JS/">JS</a><small>1</small></li>
+  
+    <li><a href="/categories/css/">css</a><small>2</small></li>
+  
+    <li><a href="/categories/javascript/">javascript</a><small>5</small></li>
+  
+    <li><a href="/categories/js/">js</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/DOM节点/" style="font-size: NaNpx;">DOM节点</a><a href="/tags/css/" style="font-size: NaNpx;">css</a><a href="/tags/js/" style="font-size: NaNpx;">js</a><a href="/tags/layout/" style="font-size: NaNpx;">layout</a><a href="/tags/object/" style="font-size: NaNpx;">object</a><a href="/tags/this/" style="font-size: NaNpx;">this</a><a href="/tags/作用域/" style="font-size: NaNpx;">作用域</a><a href="/tags/面向对象/" style="font-size: NaNpx;">面向对象</a><a href="/tags/项目说明/" style="font-size: NaNpx;">项目说明</a>
+  </div>
+</div>
+
+
+    	<footer id="footer" class="inner"><div class="copyright">
+  
+  &copy; 2014 towne
+  
+</div>
+
+
+
+</footer>
+    </aside>
+    
+    
+    <div id="hidden-navigationBar" class="navigationBar">
+      <a href="/">Towne&#39;s blog</a>
+    </div>
+    <div id="main-col" class="alignright">
+    <div id="wrapper">
+      
+<article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+  <header>
+      
+      
+  
+    <h1 class="title">JS作用域</h1>
+  
+
+      <time datetime="2014-05-20T14:18:04.000Z"><a href="/2014/05/20/js作用域/">5月 20 2014</a></time>
+      
+  </header>
+    <div class="entry">
+      
+        <h3 id="作用域是JS里面的一个难点">作用域是JS里面的一个难点</h3>
+<hr>
+<p>一般情况下，我们在写代码的同时，并不会太关心作用域的问题，往往只有程序出错的时候，我们才会考虑是不是作用域的问题。当然作用域的定义，咱们可以自己百度，网上一大堆解释。</p>
+<ol>
+<li>首先我们得先知道什么东西它有作用域，—-变量，肯定的。不管是简单的数字、Bollen或者字符串，还是object或者函数。他们都有作用域.</li>
+<li>然后我们得知道这个鬼作用域在什么时候出现，或者说，什么情况下会有作用域。javascript中只有当遇到函数的时候，作用域才随之会出现。《权威指南》中在变量作用域这一章节有说明。当然许多前辈都提到function是javascript的一等公民。也许原因就在这儿。</li>
+</ol>
+<p>当然就知道上面两点，我们还不能完全搞懂JS的作用域。前提是我们还得先了解JS的运作机理，就是JS是怎么工作的：</p>
+<ol>
+<li>首先 — 预编译，什么是预编译。预编译就是JS会将<code>var</code>定义的变量<strong>名称</strong>和<code>function</code><strong>整体</strong>以及函数的<code>arguments</code><strong>名称</strong>提前保存起来，也就是《权威指南》中提到的声明提前。JS预编译，只会去获取<strong>名称</strong>和<strong>函数整体</strong>，不会进行操作。<a id="more"></a>
+
+</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">	alert(b);</div><div class="line">	alert(a);</div><div class="line">	<span class="keyword">var</span> b = <span class="number">1</span>;</div><div class="line">	a = <span class="number">1</span>;</div><div class="line"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>我们会发现第一次弹出undefined，第二次会报错。说明变量<code>b</code>被预编译了，<code>a</code>却没有。所以只有<code>var</code>过的变量才会被JS与解析。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">	alert(b);</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">b</span><span class="params">()</span></span>{</div><div class="line">		b = <span class="number">4</span>;</div><div class="line">	}</div><div class="line">	<span class="keyword">var</span> b = <span class="number">3</span>;</div><div class="line"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>我们会发现这次弹出的不是undefined了，而是把整个函数弹出来了，仔细看，发现变量名称与函数名称重名了。在JS的预编译过程中，如果发生变量名称与函数名称重名，那么<code>function</code><strong>整体</strong>会覆盖<code>var</code>定义的变量<strong>名称</strong>；当然如果有两个函数都是<code>function b(){}</code>的话，那么执行程序的通用规则—后者覆盖前者。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a</span><span class="params">(b)</span></span>{</div><div class="line">		alert(b);</div><div class="line">		alert(c);</div><div class="line">		c = <span class="number">1</span>;</div><div class="line">	}</div><div class="line">	a();</div><div class="line"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>在函数内部，参数也会被预编译。其实上面的函数可以看成<code>function a( var b ){···}</code>，仔细发现作用域悄然而生，函数的参数只会在函数内部有效的原因就在于<code>var</code>。</p>
+<ol>
+<li>JS预编译完了之后就是语句的逐行执行。这就和其他语言没什么区别了。</li>
+</ol>
+<p>当我们理解了javascript的工作原理之后，作用域也就不是难事了。</p>
+
+	 
+	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
+<span>Posted by <a style="color:#9f9f9f;" href="null"><strong>null</strong></a> - 5月 20 2014</span><br />
+<span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://yoursite.com"><strong>Towne&#39;s blog</strong></a></span>
+</p>
+       	 
+      
+    </div>
+    <footer>
+      
+	 
+     		  
+  
+  <div class="categories">
+    <a href="/categories/javascript/">javascript</a>
+  </div>
+
+       		
+  
+  <div class="tags">
+    <a href="/tags/作用域/">作用域</a>
+  </div>
+
+     		  
+       	 
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div>
+    </div>
+    <div class="tabbar" onload="divideTabBar()">
+	
+      <div class="tabbaritem"><a class="next" href="/">Home</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/archives/">Archives</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/about/">About</a></div>
+    
+      <div class="tabbaritem"><a class="next" href="/atom.xml">Subscribe</a></div>
+    
+</div>
+
+
+  </div>
+</body>
+</html>

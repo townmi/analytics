@@ -18,15 +18,15 @@
   
    <link rel="apple-touch-icon" href="/icon.png" />
    <link rel="shortcut icon" href="/favicon.png" >
-   <link rel="alternate" href="http://xxx.xx/atom.xml" title="Towne&#39;s blog" type="application/atom+xml">
+   <link rel="alternate" href="/atom.xml" title="Towne&#39;s blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.0.min.js"></script>
 </head>
 
 
 <body>
-  <div id="content" class="inner">
+  <div id="content" class="inner clearfix m_center">
     <aside id="sidebar" class="alignleft">
       <div class="navigationBar">
         <a href="/">Towne&#39;s blog</a>
@@ -41,13 +41,11 @@
     
       <li class="cell"><a class="next" href="/about/">About</a><li>
     
-      <li class="cell"><a class="next" href="/atom.xml">Subscribe</a><li>
-    
     </ul>
 </nav>
 
   <div class="widget weibo">
-<iframe width="100%" height="100" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=110&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=0&isWeibo=0&isFans=0&uid=null&verifier=78e1ee4d&colors=ffffff,ffffff,999,000,ecfbfd&dpc=1"></iframe>
+
 </div>
 
   
@@ -61,7 +59,7 @@
   
     <li><a href="/categories/javascript/">javascript</a><small>5</small></li>
   
-    <li><a href="/categories/js/">js</a><small>1</small></li>
+    <li><a href="/categories/js/">js</a><small>0</small></li>
   
   </ul>
 </div>
@@ -71,7 +69,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/DOM节点/" style="font-size: NaNpx;">DOM节点</a><a href="/tags/css/" style="font-size: NaNpx;">css</a><a href="/tags/js/" style="font-size: NaNpx;">js</a><a href="/tags/layout/" style="font-size: NaNpx;">layout</a><a href="/tags/object/" style="font-size: NaNpx;">object</a><a href="/tags/this/" style="font-size: NaNpx;">this</a><a href="/tags/作用域/" style="font-size: NaNpx;">作用域</a><a href="/tags/面向对象/" style="font-size: NaNpx;">面向对象</a><a href="/tags/项目说明/" style="font-size: NaNpx;">项目说明</a>
+    <a href="/tags/DOM节点/" style="font-size: 20.00px;">DOM节点</a><a href="/tags/css/" style="font-size: 20.00px;">css</a><a href="/tags/js/" style="font-size: 10.00px;">js</a><a href="/tags/layout/" style="font-size: 20.00px;">layout</a><a href="/tags/object/" style="font-size: 20.00px;">object</a><a href="/tags/this/" style="font-size: 20.00px;">this</a><a href="/tags/作用域/" style="font-size: 20.00px;">作用域</a><a href="/tags/面向对象/" style="font-size: 20.00px;">面向对象</a><a href="/tags/项目说明/" style="font-size: 20.00px;">项目说明</a>
   </div>
 </div>
 
@@ -94,59 +92,6 @@
     <div id="main-col" class="alignright">
     <div id="wrapper">
       
-  
-<article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-  <header>
-      
-      
-  
-    <h1 class="title"><a href="/2014/05/21/js面向对象/">JS面向对象</a></h1>
-  
-
-      <time datetime="2014-05-21T13:32:08.000Z"><a href="/2014/05/21/js面向对象/">5月 21 2014</a></time>
-      
-  </header>
-    <div class="entry">
-      
-        <h3 id="我对JS面向对象的一些看法">我对JS面向对象的一些看法</h3>
-<hr>
-<p>面向对象是一个听起来很抽象的概念，以至于我顿时不知道该写什么了。上上个礼拜，写了个小游戏，给老师看了一下，老师给提出用面向对象的编程思想去写，面向对象可以大幅度的降低代码的耦合度。今天闲着没事干，看了老师录的面向对象那一块的视频，终于有了一点看法。<br>扯了那么多，得来点代码消化消化。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();</div></pre></td></tr></table></figure>
-
-<p>上面是我们在JS中经常创建对象的方式，当然下面两种咱们基本不用，咱们拿来看看。我们要生成一个对象，我们都是new一个Xxx()出来的，就好比一个厨师要做一个番茄炒蛋，他肯定要把鸡蛋和番茄都new出来才能做菜。但是JS本身并不是菜市场，我想要什么就new什么，但是JS提供了构造函数该我们用，就好比菜市场肯定没有番茄鸡蛋虾米酱，我们只能自己去做了。先看看构造函数：<br>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/05/21/js面向对象/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
   
 <article class="post">
   
@@ -201,7 +146,32 @@
   </div>
 </article>
 
+<nav id="pagination" >
+    
+    <a href="/" class="alignleft prev" >上一页</a>
+    
+    
+    <div class="clearfix"></div>
+</nav>
 
+<section id="comment">
+	<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"townmi"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] 
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+	<!-- 多说公共JS代码 end -->
+</section>
 
 
   
@@ -236,7 +206,7 @@
 
 	 
 	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
-<span>Posted by <a style="color:#9f9f9f;" href="null"><strong>null</strong></a> - 5月 20 2014</span><br />
+<span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/3699200532" target="_blank"><strong>townmi</strong></a> - 5月 20 2014</span><br />
 <span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://yoursite.com"><strong>Towne&#39;s blog</strong></a></span>
 </p>
        	 
@@ -252,7 +222,32 @@
   </div>
 </article>
 
+<nav id="pagination" >
+    
+    <a href="/" class="alignleft prev" >上一页</a>
+    
+    
+    <div class="clearfix"></div>
+</nav>
 
+<section id="comment">
+	<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"townmi"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] 
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+	<!-- 多说公共JS代码 end -->
+</section>
 
 
   
@@ -303,7 +298,7 @@
 
 	 
 	     <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
-<span>Posted by <a style="color:#9f9f9f;" href="null"><strong>null</strong></a> - 5月 16 2014</span><br />
+<span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/3699200532" target="_blank"><strong>townmi</strong></a> - 5月 16 2014</span><br />
 <span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://yoursite.com"><strong>Towne&#39;s blog</strong></a></span>
 </p>
        	 
@@ -319,7 +314,32 @@
   </div>
 </article>
 
+<nav id="pagination" >
+    
+    <a href="/" class="alignleft prev" >上一页</a>
+    
+    
+    <div class="clearfix"></div>
+</nav>
 
+<section id="comment">
+	<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"townmi"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] 
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+	<!-- 多说公共JS代码 end -->
+</section>
 
 
 
@@ -337,8 +357,6 @@
       <div class="tabbaritem"><a class="next" href="/archives/">Archives</a></div>
     
       <div class="tabbaritem"><a class="next" href="/about/">About</a></div>
-    
-      <div class="tabbaritem"><a class="next" href="/atom.xml">Subscribe</a></div>
     
 </div>
 

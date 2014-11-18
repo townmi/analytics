@@ -86,7 +86,8 @@ exclude_generator:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: github
-  repository: 
+  repository: git@gitcafe.com:townmi/townmi.git
+  branch: gitcafe-pages
 
 
 

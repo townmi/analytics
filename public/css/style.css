@@ -44,15 +44,15 @@ table {
 td,
 th,
 tb,
-tr {
-  border: 1px solid #ddd;
-  padding: 0 20px;
-}
+tr,
 hr {
   margin-top: 10px;
   border: none;
   height: 1px;
   background: #ddd;
+}
+td {
+  background: none;
 }
 .borderblock {
   background: #f5f5f5;
@@ -104,6 +104,9 @@ a:hover {
 }
 .clearfix:after {
   clear: both;
+}
+.m_center {
+  margin: 0 auto;
 }
 .inner {
   width: 1200px;
@@ -879,17 +882,19 @@ figure.highlight pre {
 figure.highlight table {
   margin-top: 0;
   border-spacing: 0;
+  width: 100%;
 }
 figure.highlight .gutter {
   color: #d00;
-  padding-right: 15px;
+  width: 30px;
   border-right: 1px solid #e3e3e5;
-  text-align: right;
+  text-align: center;
 }
 figure.highlight .code {
-  padding-left: 15px;
+  padding-left: 20px;
   border-left: 1px solid #fff;
   color: #666;
+  background-color: #f5f5f5;
 }
 pre .comment,
 pre .template_comment,

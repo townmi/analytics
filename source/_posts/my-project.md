@@ -1,7 +1,7 @@
-title: 'my project'
+title: my project
 date: 2014-06-13 22:56:09
 tags: 项目说明
-categories:	JS
+categories:	javascript
 ---
 ### No.1 2048 GAME ###
 ----------

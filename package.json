@@ -13,7 +13,9 @@
     "scripts": {},
     "dependencies": {
         "koa": "~2.0.0",
-        "request": "*"
+        "request": "*",
+        "sequelize": "*",
+        "mysql": "*"
     },
     "devDependencies": {}
 }

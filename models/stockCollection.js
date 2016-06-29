@@ -1,10 +1,14 @@
 var Sequelize = require("sequelize");
 var settings = require("../config/setting.js");
+var log = require("../services/log.js");
 
 var sequelize = new Sequelize(settings.db, settings.user, settings.password, {
-    host: settings.host,
-    port: settings.port,
-    dialect: "mysql"
+    host : settings.host,
+    port : settings.port,
+    dialect : "mysql",
+    logging: function (str) {
+        log.info(str+"<!log>");
+    }
 });
 
 var stockCollection = sequelize.define('stockCollection', {
@@ -16,7 +20,7 @@ var stockCollection = sequelize.define('stockCollection', {
         comment: "主键"
     },
     STOCKID: {
-        type: Sequelize.INTEGER(200),
+        type: Sequelize.STRING(100),
         allowNull: false,
         defaultValue: " ",
         comment: "股票代码"
@@ -32,7 +36,7 @@ var stockCollection = sequelize.define('stockCollection', {
         allowNull: true,
         defaultValue: null,
         comment: "股票名称"
-    }
+    },
     CREATEDAT: {
         type: Sequelize.DATE
     },

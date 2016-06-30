@@ -46,6 +46,7 @@ logs
 .tags1
 server.js
 mine.js
+/config/db.js
 #*gulpfile.js
 #*/gulpfile.js
 #*package.json

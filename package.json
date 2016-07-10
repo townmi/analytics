@@ -1,22 +1,25 @@
 {
-    "name": "analytics.js",
-    "version": "1.0.0",
-    "description": "analytics.js is for data",
-    "author": "townmi",
-    "contributors": [],
-    "main": "",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/townmi/analytics.git"
-    },
-    "scripts": {},
-    "dependencies": {
-        "koa": "~2.0.0",
-        "request": "*",
-        "sequelize": "*",
-        "mysql": "*",
-        "log4js": "~0.6.0"
-    },
-    "devDependencies": {}
+  "name": "analytics.js",
+  "version": "1.0.0",
+  "description": "analytics.js is for data",
+  "author": "townmi",
+  "contributors": [],
+  "main": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/townmi/analytics.git"
+  },
+  "scripts": {},
+  "dependencies": {
+    "koa": "~2.0.0",
+    "request": "*",
+    "sequelize": "*",
+    "mysql": "*",
+    "log4js": "~0.6.0"
+  },
+  "devDependencies": {
+    "gulp": "＊",
+    "webpack": "^1.13.1"
+  }
 }

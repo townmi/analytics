@@ -1,30 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "analytics.js",
-  "version": "1.0.0",
-  "description": "analytics.js is for data",
-  "author": "townmi",
-  "contributors": [],
-  "main": "",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/townmi/analytics.git"
-  },
-  "scripts": {},
-  "dependencies": {
-    "koa": "~2.0.0",
-    "request": "*",
-    "sequelize": "*",
-    "mysql": "*",
-    "log4js": "~0.6.0"
-  },
-  "devDependencies": {
-    "gulp": "＊",
-    "webpack": "^1.13.1"
-  }
-}
-=======
     "name": "analytics.js",
     "version": "1.0.0",
     "description": "analytics.js is for data",
@@ -47,7 +21,8 @@
     "devDependencies": {
         "babel-cli": "^6.10.1",
         "babel-core": "^6.10.4",
-        "babel-preset-es2015": "^6.9.0"
+        "babel-preset-es2015": "^6.9.0",
+        "gulp": "＊",
+        "webpack": "^1.13.1"
     }
 }
->>>>>>> 83bac69a8bcec923723d60f01ddb5b13a078bcf9

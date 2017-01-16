@@ -1,9 +1,9 @@
 /*!
  * @author harrytang@vipabc.com 
- * @date 16/6/29.
+ * @date 17/1/16.
  */
 let log = require("./log.js");
-let StockCollection = require("../models/stockCollection.js");
+let StockCollection = require("../models/stockList.js");
 
 module.exports = function(sql){
 

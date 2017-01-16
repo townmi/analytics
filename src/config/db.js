@@ -7,6 +7,6 @@ module.exports = {
 	"port": 3306,
 	"user": "root",
 	// vps
-	"password": "123qwe",
+	"password": "abcd1234",
 	"db": "stock"
 };

@@ -1,8 +1,8 @@
-var Sequelize = require("sequelize");
-var settings = require("../config/db.js");
-var log = require("../services/log.js");
+let Sequelize = require("sequelize");
+let settings = require("../config/db.js");
+let log = require("../services/log.js");
 
-var sequelize = new Sequelize(settings.db, settings.user, settings.password, {
+let sequelize = new Sequelize(settings.db, settings.user, settings.password, {
     host : settings.host,
     port : settings.port,
     dialect : "mysql",
@@ -11,7 +11,7 @@ var sequelize = new Sequelize(settings.db, settings.user, settings.password, {
     }
 });
 
-var stockCollection = sequelize.define('stockCollection', {
+let stockCollection = sequelize.define('stockCollection', {
     ID: {
         type: Sequelize.INTEGER(100),
         allowNull: true,
@@ -25,26 +25,46 @@ var stockCollection = sequelize.define('stockCollection', {
         defaultValue: " ",
         comment: "股票代码"
     },
-    STOCKNAME: {
-        type: Sequelize.STRING(100),
-        allowNull: true,
-        defaultValue: null,
-        comment: "股票简称"
+    OPENATCASH: {
+        type: Sequelize.FLOAT(11),
+        allowNull: false,
+        defaultValue: 0,
+        comment: "开盘价格"
     },
-    STOCKCHINANAME: {
-        type: Sequelize.STRING(100),
-        allowNull: true,
-        defaultValue: null,
-        comment: "股票名称"
+    MIDCLOSEATCASH: {
+        type: Sequelize.FLOAT(11),
+        allowNull: false,
+        defaultValue: 0,
+        comment: "中午休盘价格"
     },
-    CREATEDAT: {
-        type: Sequelize.DATE
+    MIDOPENATCASH: {
+        type: Sequelize.FLOAT(11),
+        allowNull: false,
+        defaultValue: 0,
+        comment: "中午开盘价格"
+    },
+    CLOSEATCASH: {
+        type: Sequelize.FLOAT(20),
+        allowNull: false,
+        defaultValue: 0,
+        comment: "当天休盘价格"
+    },
+    TRADECOUNT: {
+        type: Sequelize.DECIMAL(10, 2),
+        allowNull: false,
+        defaultValue: 0,
+        comment: "成交量"
+    },
+    DATE: {
+        type: Sequelize.DATEONLY,
+        allowNull: false,
+        defaultValue: "2017-01-16",
+        comment: "日期"
     },
     UPDATEAT: {
         type: Sequelize.DATE
     }
 }, {
-    createdAt: 'CREATEDAT',
     updatedAt: 'UPDATEAT',
     charset: 'utf8',
     collate: 'utf8_general_ci'

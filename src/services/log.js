@@ -2,7 +2,7 @@
  * @author harrytang@vipabc.com 
  * @date 16/6/29.
  */
-var log4js = require("log4js");
+let log4js = require("log4js");
 
 log4js.configure({
     appenders: [
@@ -17,6 +17,6 @@ log4js.configure({
     ]
 });
 
-var log = log4js.getLogger('log');
+let log = log4js.getLogger('log');
 
 module.exports = log;

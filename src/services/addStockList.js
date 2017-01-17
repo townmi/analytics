@@ -3,13 +3,13 @@
  * @date 17/1/16.
  */
 let log = require("./log.js");
-let StockCollection = require("../models/stockList.js");
+let stockList = require("../models/stockList.js");
 
 module.exports = function(sql){
 
-    return StockCollection.sync({logging: false}).then(function () {
+    return stockList.sync({logging: false}).then(function () {
 
-        return StockCollection.upsert(sql);
+        return stockList.upsert(sql);
 
     }).then(
         function (data) {

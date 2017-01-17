@@ -7,7 +7,7 @@ let StockCollection = require("../models/stockCollection.js");
 
 module.exports = function(sql){
 
-    return StockCollection.sync({logging: false}).then(function () {
+    return StockCollection.sync().then(function () {
 
         return StockCollection.upsert(sql);
 

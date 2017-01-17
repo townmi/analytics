@@ -1,21 +1,22 @@
 {
-    "name": "analytics.js",
-    "version": "1.0.0",
-    "description": "analytics.js is for data",
-    "author": "townmi",
-    "contributors": [],
-    "main": "",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/townmi/analytics.git"
-    },
-    "scripts": {},
-    "dependencies": {
-        "request": "*",
-        "sequelize": "*",
-        "mysql": "*",
-        "log4js": "~0.6.0",
-        "bluebird": "*"
-    }
+  "name": "analytics.js",
+  "version": "1.0.0",
+  "description": "analytics.js is for data",
+  "author": "townmi",
+  "contributors": [],
+  "main": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/townmi/analytics.git"
+  },
+  "scripts": {},
+  "dependencies": {
+    "bluebird": "*",
+    "log4js": "~0.6.0",
+    "mysql": "*",
+    "node-schedule": "^1.2.0",
+    "request": "*",
+    "sequelize": "*"
+  }
 }
